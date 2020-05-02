@@ -1,0 +1,266 @@
+.footer {
+  padding: 25px 0;
+  background-color: #f3f3f3;
+  /* .footer__inner */
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+  }
+
+  /* .footer__block */
+
+  &__block {
+    width: 25%;
+    padding: 0 10px;
+
+  }
+
+  /* .footer__block-title */
+
+  &__block-title {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #373737;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+
+    i {
+      display: flex;
+      flex: 0 0 30px;
+      font-size: 18px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      border-radius: 50%;
+      border: 2px solid #7e7e7e;
+      margin-right: 15px;
+    }
+
+    span {
+      max-width: 180px;
+      width: 100%;
+    }
+  }
+
+  /* .footer__block-list */
+
+  &__copyright {
+    padding-top: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px dashed #d4d4d4;
+
+    &-text {
+      text-align: center;
+      max-width: 470px;
+      width: 100%;
+      font-size: 12px;
+      color: #a4a4a4;
+      font-weight: 500;
+    }
+
+    .site-map__link {
+      font-size: 11px;
+      color: #b9a9a1;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    margin-bottom: 15px;
+
+    a {
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      color: #9b9b9a;
+      transition: color 0.2s linear;
+      line-height: 24px;
+      margin: 0 10px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  a {
+
+    &:hover {
+      opacity: 1;
+
+      .icon-youtube-play {
+        color: #FF0000;
+      }
+
+      .icon-vk {
+        color: #4c75a3;
+      }
+
+      .icon-instagram {
+        background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.footer__block-list,
+.contact-list {
+  li {
+    a {
+      display: inline-block;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      color: #9b9b9a;
+      transition: 0.2s linear;
+      line-height: 24px;
+      padding: 10px 0;
+
+      &:hover {
+        color: #272727;
+      }
+
+      i {
+        font-size: 24px;
+        margin-right: 10px;
+        display: block;
+      }
+    }
+
+    .privacy-link {
+      color: #c19f8d;
+    }
+  }
+
+  // .social-links {
+  //   margin: 20px 0;
+  //   display: flex;
+  // }
+
+  .subscribe-newsletter {
+    margin: 40px 0 10px;
+
+    span {
+      display: block;
+      font-size: 15px;
+      color: #9b9b9a;
+      margin-bottom: 10px;
+    }
+
+    input {
+      max-width: 136px;
+      width: 100%;
+      border: 2px solid #bebebe;
+      line-height: 28px;
+      padding: 0 5px;
+      border-radius: 2px 0px 0px 2px;
+    }
+
+    .btn-arrow {
+      line-height: 32px;
+      background-color: #bebebe;
+      border-radius: 0px 2px 2px 0px;
+      padding: 0;
+
+      i {
+        width: 48px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .newsletter {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+
+
+@media (max-width: 850px) {
+  .footer {
+    padding: 0 0 10px;
+
+    &__inner {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    &__block {
+      width: 100%;
+      border-bottom: 2px solid #fff;
+      position: relative;
+      cursor: pointer;
+
+      &.subscribe {
+        cursor: inherit;
+      }
+
+      &::after {
+        content: "\f054";
+        position: absolute;
+        font-family: 'icomoon' !important;
+        right: 10px;
+        top: 18px;
+        transform: rotate(90deg);
+        color: #9b9b9a;
+      }
+
+      ul {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.7s;
+      }
+
+      &.active {
+        ul {
+          max-height: 12em;
+        }
+      }
+
+      &.subscribe {
+        ul {
+          overflow: visible;
+          max-height: initial;
+          transition: max-height 0.7s;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &__copyright {
+      flex-direction: column;
+
+      .site__map {
+        display: none;
+      }
+    }
+
+    .social-links {
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+  }
+
+  .footer__block-list .subscribe-newsletter input {
+    max-width: 100%;
+  }
+}

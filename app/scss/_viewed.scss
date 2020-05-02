@@ -1,0 +1,41 @@
+.viewed {
+  .main__columns-title {
+    margin-top: 25px;
+
+    h2 {
+      font-size: 29px;
+      font-weight: 300;
+      color: #3c3c3c;
+    }
+  }
+
+  .main__columns-item__image,
+  .main__columns-item__link {
+    max-width: 124px;
+    width: 100%;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      .main__columns-item__link {
+        opacity: 1;
+      }
+
+      .main__columns-item__title {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .main__columns-item__title {
+    position: relative;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7aa5ae;
+  }
+}

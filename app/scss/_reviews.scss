@@ -1,0 +1,174 @@
+.reviews {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 65px;
+    &:last-child {
+      margin-bottom: 10px;
+    }
+
+    &-content {
+      padding: 0 60px 0 0;
+      display: flex;
+      flex-direction: column;
+
+
+      h2 {
+        font-size: 34px;
+        font-weight: 400;
+        text-align: inherit;
+        color: #3b3b3b;
+
+      }
+
+      p {
+        flex: 0 1 100%;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #474747;
+        max-width: 100%;
+        width: 100%;
+        height: 167px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &-image {
+      max-width: 329px;
+      flex: 0 0 100%;
+      overflow: hidden;
+
+      img {
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &:nth-child(even) {
+      .reviews__row-content {
+        order: 2;
+        padding: 0 0 0 60px;
+      }
+
+      .reviews__row-image {
+        order: 1;
+      }
+    }
+  }
+
+  .content-block {
+    margin: 0;
+  }
+
+  .btn-arrow {
+    max-width: 260px;
+    margin-top: 0;
+    padding: 0 10px;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 1060px) {
+  .reviews {
+    &__row {
+      &-content {
+        padding: 0 20px 0 0;
+
+        h2 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 26px;
+          height: 140px;
+        }
+      }
+
+      &:nth-child(even) {
+        .reviews__row-content {
+          padding: 0 0 0 20px;
+        }
+
+      }
+
+    }
+  }
+}
+
+
+@media (max-width: 850px) {
+  .reviews {
+    &__row {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-image {
+        order: 1;
+        margin-bottom: 20px;
+      }
+
+      &-content {
+        order: 2;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+
+      &:nth-child(even) {
+        .reviews__row-content {
+          padding: 0;
+        }
+      }
+    }
+
+    .btn-arrow {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 660px) {
+  .reviews {
+    &__row {
+      margin-bottom: 40px;
+
+      &-content {
+        h2 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          height: 143px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .reviews__row-image img {
+    width: 100%;
+  }
+}

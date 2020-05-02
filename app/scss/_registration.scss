@@ -1,0 +1,74 @@
+.registration {
+  .main__columns-title h2 {
+    font-size: 40px;
+    color: #3c3c3c;
+  }
+
+  .form {
+    &__container {
+      padding: 20px 40px 43px;
+
+      h3 {
+        text-align: center;
+      }
+    }
+
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__column {
+      width: 48%;
+    }
+
+    &__row {
+
+      .privacy {
+        padding-left: 20px;
+
+        span {
+          color: #3c3c3c;
+        }
+      }
+
+      &-code {
+        width: 100%;
+      }
+
+      &-image {
+        margin: 25px 0 15px 0;
+      }
+
+      &-btn {
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .btn-submit {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+@media(max-width: 850px) {
+  .registration {
+    .form {
+      flex-direction: column;
+
+      &__column {
+        width: 100%;
+      }
+
+      &__row-image {
+        margin: 0px 0 15px 0;
+      }
+    }
+  }
+}
+
+@media(max-width: 450px) {
+  .registration .form__container {
+    padding: 20px 20px 43px;
+  }
+}

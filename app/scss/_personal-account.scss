@@ -1,0 +1,507 @@
+.personal-account {
+  padding: 30px 0 0 0;
+
+  .main__columns-title {
+    text-align: left;
+  }
+
+  &__list {
+    width: 30%;
+    padding-right: 20px;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+
+  &__column {
+    width: 35%;
+    padding: 0 20px;
+
+    ul>li {
+      font-size: 18px;
+      padding: 10px 0;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #7aa5ae;
+      }
+
+      a {
+        text-decoration: underline;
+        color: #baa59a;
+
+        &+a {
+          position: relative;
+          padding-left: 7px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            background-color: #baa59a;
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    padding: 11px 0;
+    color: #545454;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 28px;
+      margin-right: 10px;
+    }
+
+    &.active {
+      color: #7aa5ae;
+    }
+  }
+
+  &__edit {
+    padding: 20px;
+    background-color: #e7f8ed;
+    color: #080808;
+    font-size: 18px;
+    margin-bottom: 25px;
+
+    i {
+      color: #10b853;
+    }
+  }
+
+  &.settings {
+    .form__column {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .personal-account__column {
+      max-width: 570px;
+      width: 100%;
+      padding: 0;
+
+    }
+
+    .btn-submit {
+      line-height: 43px;
+      padding: 0 10px;
+      margin-top: 25px;
+
+      i {
+        height: 43px;
+      }
+    }
+  }
+
+  &__exit {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: #c5b4ab;
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 28px;
+      margin-right: 5px;
+    }
+  }
+
+  &.history {
+    .personal-account__column {
+      max-width: 856px;
+      width: 100%;
+    }
+
+    .personal-account__order {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .table {
+        display: none;
+
+        &.show {
+          display: block;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 500;
+        color: #585858;
+      }
+
+      &-title {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .order-status {
+        padding: 0 10px;
+        max-width: 222px;
+        width: 100%;
+      }
+
+      .order-date {
+        padding: 0 10px;
+        max-width: 225px;
+        width: 100%;
+      }
+
+      .order-sum {
+        padding: 0 10px;
+        max-width: 147px;
+        width: 100%;
+      }
+
+      .order-toggler {
+        padding: 0 10px;
+
+        span {
+          padding: 10px 0;
+          cursor: pointer;
+
+          i {
+            font-size: 14px;
+            transform: rotate(90deg);
+          }
+        }
+
+        color: #c19f8d;
+        max-width: 117px;
+        width: 100%;
+
+
+        .order-hide,
+        .order-show {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .order-hide {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        &.show {
+          .order-hide {
+            opacity: 1;
+            visibility: visible;
+
+            i {
+              font-size: 14px;
+              transform: rotate(-90deg);
+            }
+          }
+
+          .order-show {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .pagination {
+      li {
+        font-size: 16px;
+      }
+
+      .nice-select {
+        height: 25px;
+        line-height: 24px;
+        border-radius: 0;
+        padding-left: 3px;
+        padding-right: 18px;
+
+        .list {
+          border-radius: 0;
+          width: 50px;
+
+        }
+
+        .option {
+          padding: 0px;
+          font-weight: 400;
+        }
+
+        &::after {
+          width: 6px;
+          height: 6px;
+          margin-top: -3px;
+          right: 9px;
+        }
+      }
+    }
+  }
+
+  &.delivery-address,
+  &.email-address {
+    .personal-account__column {
+      max-width: 767px;
+      width: 100%;
+    }
+
+    .form {
+      background-color: #f3f3f3;
+
+      &__container {
+        padding: 20px 30px;
+      }
+
+      &__row-btn {
+        .btn-submit {
+          align-self: flex-end;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  &.email-address {
+    .form__row-check {
+      padding-left: 20px;
+
+      &>label {
+        span {
+          color: #373737;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1160px) {
+  .personal-account {
+
+    .pagination li.pagination-show,
+    .pagination li.pagination-select {
+      display: flex;
+      flex-direction: row;
+
+      &>span {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .personal-account {
+    &__link {}
+
+    &__column {
+      ul>li {
+        a+a {
+          padding-left: 0;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .personal-account {
+    &__inner {
+      flex-wrap: wrap;
+    }
+
+    &__link {
+      font-size: 14px;
+      max-width: 100px;
+
+      i {
+        font-size: 24px;
+      }
+    }
+
+    &__list {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 10px;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #e9e9e9;
+
+        li {
+          width: 20%;
+          display: flex;
+          justify-content: center;
+          border-right: 1px solid #c5c2be;
+
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+
+    &__column {
+      width: 50%;
+      padding: 0 20px;
+    }
+
+    &.settings {
+      .personal-account__column {
+        margin: 30px auto 0;
+      }
+    }
+
+    &.history,
+    &.delivery-address,
+    &.email-address {
+      .personal-account__column {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .personal-account__order p {
+        font-size: 14px;
+      }
+
+      .form__container {
+        padding: 20px;
+      }
+    }
+
+
+
+    .pagination li.pagination-show,
+    .pagination li.pagination-select {
+      font-size: 14px;
+    }
+  }
+
+  .personal-account__edit {
+    margin-top: 10px;
+  }
+
+  .personal-account.history .personal-account__order .order-toggler {
+    font-size: 14px;
+    max-width: 102px;
+  }
+
+  .personal-account.history .personal-account__order .order-toggler span i,
+  .personal-account.history .personal-account__order .order-toggler.show .order-hide i {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 650px) {
+  .personal-account {
+    &__list {
+      ul {
+        li {
+          width: 50%;
+
+          &:nth-child(odd) {
+            border-right: 1px solid #c5c2be;
+          }
+
+          &:nth-child(even) {
+            border: none;
+          }
+        }
+      }
+    }
+
+    &.history {
+      .personal-account__order-title {
+        flex-wrap: wrap;
+
+        .order-status,
+        .order-date,
+        .order-sum {
+          width: 33%;
+          max-width: inherit;
+          text-align: center;
+        }
+
+        .order-toggler {
+          width: 100%;
+          max-width: inherit;
+
+          .order-show,
+          .order-hide {
+            justify-content: flex-start;
+
+            i {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:610px) {
+  .settings {
+    .form__container {
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .personal-account {
+
+
+    &__column {
+      ul>li {
+        font-size: 14px;
+
+        h3 {
+          font-size: 14px;
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .personal-account {
+    &.history {
+      .personal-account__order-title {
+        flex-wrap: wrap;
+
+        .order-status,
+        .order-date,
+        .order-sum {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>100Kranov</title>
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-content">
+              <div class="header__top-left">
+                <a class="contact-us" data-fancybox data-src="#contact-us" href="javascript:;">
+                  <span>Cвяжитесь с нами</span>
+                  <i class="icon-comments icon"></i>
+                </a>
+                <a class="tel" href="tel:+79999999999">
+                  <i class="icon-phone icon"></i>
+                  <span>+7 999 999 99 99</span>
+                </a>
+                <a class="mail" href="mailto:info@100kranov.ru">
+                  <i class="icon-envelope-o icon"></i>
+                  <span>info@100kranov.ru</span>
+                </a>
+              </div>
+              <div class="header__top-right">
+                <a class="login" data-fancybox data-src="#login-modal" href="javascript:;">Войти</a>
+                <a class="registration" href="#">Зарегистрироваться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__middle">
+          <div class="container">
+            <div class="header__middle-content">
+              <div class="burger">
+                <div class="burger-box">
+                  <div class="burger-row"></div>
+                </div>
+                <span class="header__nav-close">
+                  <i class="icon-close1"></i>
+                </span>
+              </div>
+              <div class="header__middle-logo">
+                <a href="index.html"><img src="images/logo.svg" alt=""></a>
+              </div>
+              <div class="header__middle-search">
+                <i class="icon-search icon"></i>
+                <div class="search">
+                  <input type="text">
+                  <button class="btn btn-search" type="submit">Найти</button>
+                </div>
+              </div>
+              <div class="header__middle-opt">
+                <div class="header__middle-opt-item">
+                  <a href="personal-account.html" class="personal-area">
+                    <i class="icon-user-o icon"></i>
+                  </a>
+                  <div class="header__middle-opt-content">
+                    <a href="personal-account.html"><span>Личный кабинет</span></a>
+                  </div>
+                </div>
+                <div class="header__middle-opt-item">
+                  <a class="basket" href="#">
+                    <i class="icon-shopping-cart icon"></i>
+                  </a>
+                  <div class="header__middle-opt-content">
+                    <a href="#">
+                      <span>Корзина</span>
+                      <span class="count">(0)</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="header__nav">
+          <div class="container">
+            <div class="header__nav-content">
+              <ul class="b-menu">
+                <li>
+                  <a href="#">Все Смесители
+                    <i class="icon-chevron-right"></i>
+                  </a>
+                  <div class="submenu">
+                    <div class="submenu__content">
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-1.png" alt="Для кухни">
+                          </a>
+                        </div>
+                        <a href="#">Для кухни &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-2.png" alt="Для ванной">
+                          </a>
+                        </div>
+                        <a href="#">Для ванной &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-3.png" alt="Для душа">
+                          </a>
+                        </div>
+                        <a href="#">Для душа &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-4.png" alt="Для гигиенического
+                    душа">
+                          </a>
+                        </div>
+                        <a href="#">Для гигиенического
+                          душа &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-5.png" alt="Для биде">
+                          </a>
+                        </div>
+                        <a href="#">Для биде &raquo;
+                        </a>
+                      </div>
+                    </div>
+                    <div class="submenu__list">
+                      <span class="title-submenu">Больше смесителей:</span>
+                      <ul>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a class="all-product" href="category.html">
+                            Все смесители &raquo;
+                          </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">Для кухни
+                    <i class="icon-chevron-right"></i>
+                  </a>
+                  <div class="submenu">
+                    <div class="submenu__content">
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-1.png" alt="Для кухни">
+                          </a>
+                        </div>
+                        <a href="#">Для кухни &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-2.png" alt="Для ванной">
+                          </a>
+                        </div>
+                        <a href="#">Для ванной &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-3.png" alt="Для душа">
+                          </a>
+                        </div>
+                        <a href="#">Для душа &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-4.png" alt="Для гигиенического
+                    душа">
+                          </a>
+                        </div>
+                        <a href="#">Для гигиенического
+                          душа &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-5.png" alt="Для биде">
+                          </a>
+                        </div>
+                        <a href="#">Для биде &raquo;
+                        </a>
+                      </div>
+                    </div>
+                    <div class="submenu__list">
+                      <span class="title-submenu">Больше смесителей:</span>
+                      <ul>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a class="all-product" href="category.html">
+                            Все смесители &raquo;
+                          </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">В ванную комнату
+                    <i class="icon-chevron-right"></i>
+                  </a>
+                  <div class="submenu">
+                    <div class="submenu__content">
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-1.png" alt="Для кухни">
+                          </a>
+                        </div>
+                        <a href="#">Для кухни &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-2.png" alt="Для ванной">
+                          </a>
+                        </div>
+                        <a href="#">Для ванной &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-3.png" alt="Для душа">
+                          </a>
+                        </div>
+                        <a href="#">Для душа &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-4.png" alt="Для гигиенического
+                    душа">
+                          </a>
+                        </div>
+                        <a href="#">Для гигиенического
+                          душа &raquo;
+                        </a>
+                      </div>
+                      <div class="submenu__item">
+                        <div class="submenu__item-image">
+                          <a href="#">
+                            <img src="images/submenu/submenu-5.png" alt="Для биде">
+                          </a>
+                        </div>
+                        <a href="#">Для биде &raquo;
+                        </a>
+                      </div>
+                    </div>
+                    <div class="submenu__list">
+                      <span class="title-submenu">Больше смесителей:</span>
+                      <ul>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a href="#">
+                            Больше смесителей &raquo;
+                          </a></li>
+                        <li><a class="all-product" href="category.html">
+                            Все смесители &raquo;
+                          </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li><a href="#">Аксессуары</a></li>
+                <li><a href="#">Производители</a></li>
+                <li><a href="reviews.html">Обзоры</a></li>
+                <li><a href="about-company.html">О компании</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </header>
+
+
+      <div class="breadcrumb">
+        <div class="container">
+          <ul class="breadcrumb__list">
+            <li>
+              <a href="index.html">Главная</a>
+            </li>
+            <li>
+              <span>Регистрация</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <main class="main personal-account account">
+        <div class="container">
+          <div class="main__inner">
+            <div class="main__columns">
+              <div class="main__columns-title">
+                <h2>Личный кабинет</h2>
+              </div>
+              <div class="personal-account__inner">
+                <div class="personal-account__list">
+                  <ul>
+                    <li>
+                      <a class="personal-account__link personal-account__link-account active" href="personal-account.html">
+                        <i class="icon-user-o"></i>
+                        <span>Мой аккаунт</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="personal-account__link personal-account__link-settings" href="personal-account-settings.html">
+                        <i class="icon-sliders"></i>
+                        <span>Настройки</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="personal-account__link personal-account__link-history" href="personal-account-history.html">
+                        <i class="icon-history"></i>
+                        <span>История заказов</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="personal-account__link personal-account__link-address" href="personal-account-delivery-address.html">
+                        <i class="icon-map-marker"></i>
+                        <span>Адрес</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="personal-account__link personal-account__link-email" href="personal-account-email-address.html">
+                        <i class="icon-envelope-o"></i>
+                        <span>E-mail рассылка</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="personal-account__column">
+                  <ul>
+                    <li>
+                      <h3>Контактная информация</h3>
+                    </li>
+                    <li>
+                      Иванов Иван Иванович
+                    </li>
+                    <li>
+                      +7 999 999 99 99
+                    </li>
+                    <li>
+                      маил@mail.ru
+                    </li>
+                    <li>
+                      <a href="#">Редактировать</a>
+                      <a href="#">Сменить пароль</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="personal-account__column">
+                  <ul>
+                    <li>
+                      <h3>Адрес доставки</h3>
+                    </li>
+                    <li>
+                      Г. Москва, ул. Уличная, дом 3 кв 4
+                    </li>
+                    <li>
+                      <a href="#">Редактировать</a>
+                    </li>
+                  </ul>
+                </div>
+                <a class="personal-account__exit" href="#">
+                  <i class="icon-exit"></i>
+                  <span>Выйти</span>
+                </a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </main>
+      <a id="button"></a>
+    </div>
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__block accordion">
+            <h3 class="footer__block-title">
+              <i class="icon-phone"></i>
+              <span>Контакты</span>
+            </h3>
+            <ul class="footer__block-list contact-list">
+              <li>
+                <a class="tel" href="tel:+79999999999">
+                  <i class="icon-phone icon"></i>
+                  <span>+7 999 999 99 99</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="icon-clock-o"></i>
+                  <span>Пн-Вс, 9:00-21:00</span>
+                </a>
+              </li>
+              <li>
+                <a class="mail" href="mailto:info@100kranov.ru">
+                  <i class="icon-envelope-o icon"></i>
+                  <span>info@100kranov.ru</span>
+                </a>
+              </li>
+              <li>
+                <a class="contact-us" href="#">
+                  <i class="icon-comments icon"></i>
+                  <span>Мы в мессенджерах</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__block feedback accordion">
+            <h3 class="footer__block-title">
+              <i class="icon-headset_mic"></i>
+              <span>Обратная связь</span>
+            </h3>
+            <ul class="footer__block-list">
+              <li>
+                <a href="#">
+                  Cервис и поддержка
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Статус заказа
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Гарантия и возврат
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__block accordion">
+            <h3 class="footer__block-title">
+              <i class="icon-info"></i>
+              <span>Информация</span>
+            </h3>
+            <ul class="footer__block-list">
+              <li>
+                <a href="#">
+                  О компании
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Доставка и оплата
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Схема проезда
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Условия и соглашения
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Политика конфиденциальности
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__block subscribe">
+            <h3 class="footer__block-title">
+              <i class="icon-newspaper-o"></i>
+              <span>Подпишитесь на Email-рассылку </span>
+            </h3>
+            <ul class="footer__block-list">
+              <li class="subscribe-newsletter">
+                <span>Ваш Email*</span>
+                <div class="newsletter">
+                  <input type="text" name="subscribe">
+                  <button class="btn btn-arrow btn-arrow-small">
+                    <i class="icon-chevron-right"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="privacy">
+                <label class="check">
+                  <input class="check__input" type="checkbox">
+                  <span class="check__box"></span>
+                  Я согласен на обработку персональных данных
+                </label>
+                <a class="privacy-link" href="#">Политики конфиденциальности</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#">
+            <i class="icon-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="icon-vk"></i>
+          </a>
+          <a href="#">
+            <i class="icon-youtube-play"></i>
+          </a>
+        </div>
+        <div class="footer__copyright">
+          <div class="footer__copyright-logo">
+            <object data="images/footer-logo.svg" type="image/svg+xml" width="120" height="28"></object>
+          </div>
+          <div class="footer__copyright-text">
+            <p>
+              Интернет-магазин смесителей 100Kranov © 2017-2019. Все права защищены
+              Адрес: Москва, Духовской пер., д. 17
+            </p>
+          </div>
+          <div class="site__map">
+            <a class="site-map__link" href="map-of-site.html">Карта сайта</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="contact-us">
+    <div class="form__container">
+      <h3>
+        Свяжитесь с нами
+      </h3>
+      <form class="form" id="form">
+        <div class="form__row">
+          <label for="name">Ваше Имя<span>*</span></label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form__row">
+          <label for="email">Ваш E-mail<span>*</span></label>
+          <input type="text" id="email" name="email" required>
+        </div>
+        <div class="form__row">
+          <label for="phone">Ваш телефон<span>*</span></label>
+          <input type="text" id="phone" name="phone" required>
+        </div>
+        <div class="form__row">
+          <label for="message">Сообщение<span>*</span></label>
+          <input type="text" id="message" name="question" required>
+        </div>
+        <div class="privacy">
+          <label class="check" for="agree">
+            <input class="check__input" type="checkbox" name="agree" id="agree">
+            <span class="check__box"></span>
+            Я согласен на обработку персональных данных
+          </label>
+          <a class="privacy-link" href="#">Политики конфиденциальности</a>
+        </div>
+        <button class="btn btn-arrow btn-submit">
+          <span>Отправить</span>
+          <i class="icon-chevron-right icon"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="login-modal">
+    <div class="form__container">
+      <h3>
+        Войдите, чтобы продолжить
+      </h3>
+      <div class="login-error">
+        <p><span>!</span>Такой логин или пароль не существует!</p>
+      </div>
+      <form class="form" id="form-login">
+        <div class="form__row">
+          <label for="login">Логин<span>*</span></label>
+          <input type="text" id="login" name="login" required>
+        </div>
+        <div class="form__row">
+          <label for="password">Пароль<span>*</span></label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="from__row">
+          <a class="forgot-password" href="#">Забыли пароль?</a>
+        </div>
+        <div class="modal__footer">
+          <div class="modal__footer-text">
+            <a class="registration" href="#">Регистрация</a>
+            <p>Регистрация позволит вам совершать покупки в нашем магазине быстрее</p>
+          </div>
+          <button class="btn btn-arrow btn-submit">
+            <span>Войти</span>
+            <i class="icon-chevron-right icon"></i>
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/jquery.nice-select.js"></script>
+  <script src="js/libs.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
