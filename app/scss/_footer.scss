@@ -162,7 +162,8 @@
       max-width: 136px;
       width: 100%;
       border: 2px solid #bebebe;
-      line-height: 28px;
+      line-height: 30px;
+      height: 32px;
       padding: 0 5px;
       border-radius: 2px 0px 0px 2px;
     }
@@ -228,7 +229,7 @@
 
       &.active {
         ul {
-          max-height: 12em;
+          max-height: 15em;
         }
       }
 

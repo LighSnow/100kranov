@@ -10,16 +10,16 @@ html {
   margin: 0;
 }
 
-
+html,
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  line-height: 1.2;
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.15;
 
   &.active {
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -30,7 +30,6 @@ body {
     }
   }
 }
-
 
 p {
   margin: 10px 0;
@@ -55,7 +54,6 @@ a {
 img {
   display: block;
   width: 100%;
-
 }
 
 .container {
@@ -67,7 +65,7 @@ img {
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .content {
@@ -78,7 +76,6 @@ img {
   flex: 0 0 auto;
 }
 
-
 .btn {
   color: #ffffff;
   font-size: 18px;
@@ -87,6 +84,15 @@ img {
   border: none;
   padding: 0 10px;
   transition: all 0.2s linear;
+
+  &-submit {
+    &>span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
 
   &-arrow {
     display: flex;
@@ -97,6 +103,8 @@ img {
     width: 100%;
     padding: 0 10px;
     background-color: #7aa5ae;
+
+
 
     i {
       display: flex;
@@ -121,6 +129,8 @@ img {
   }
 }
 
+
+
 .slick-dots {
   position: absolute;
   bottom: 42px;
@@ -128,7 +138,6 @@ img {
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
-
 
   li {
     width: 21px;
@@ -175,11 +184,13 @@ img {
   border: none;
   outline: none;
   top: 21%;
+  opacity: 1;
+  visibility: visible;
 
   &::after {
     content: "\f054";
     position: absolute;
-    font-family: 'icomoon' !important;
+    font-family: "icomoon" !important;
     font-size: 28px;
     color: #a6a6a6;
     left: 50%;
@@ -188,8 +199,6 @@ img {
   }
 
   &.slick-prev {
-
-
     left: 0;
 
     &::after {
@@ -200,20 +209,23 @@ img {
   &.slick-next {
     right: 0;
   }
+
+  &.slick-disabled {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .slick-slide {
   outline: none;
 }
 
-
-
-
 .check {
   padding-left: 25px;
   color: #373737;
   display: inline-block;
   cursor: pointer;
+  position: relative;
 
   &__input {
     position: absolute;
@@ -234,11 +246,10 @@ img {
 
   &__box {
     position: absolute;
-    overflow: hidden;
     width: 22px;
     height: 20px;
-    margin-left: -25px;
-    margin-top: -3px;
+    left: 0;
+    top: 0;
 
     display: flex;
     justify-content: center;
@@ -247,11 +258,14 @@ img {
     &::after {
       position: absolute;
       content: "\f096";
-      font-family: 'icomoon' !important;
+      font-family: "icomoon" !important;
       font-size: 20px;
-      width: 20px;
+      width: 22px;
       height: 20px;
       display: block;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%)
     }
   }
 }
@@ -260,9 +274,6 @@ img {
   color: #c19f8d;
   text-decoration: underline;
 }
-
-
-
 
 .breadcrumb {
   background-color: #f9f9f9;
@@ -292,7 +303,7 @@ img {
 
           &::before {
             content: "\f015";
-            font-family: 'icomoon' !important;
+            font-family: "icomoon" !important;
             position: absolute;
             font-size: 18px;
             left: 0;
@@ -306,7 +317,7 @@ img {
 
         &::before {
           content: "\f054";
-          font-family: 'icomoon' !important;
+          font-family: "icomoon" !important;
           position: absolute;
           left: -13px;
           font-size: 10px;
@@ -323,7 +334,7 @@ img {
   transition: color 0.2s linear;
 
   &:hover {
-    color: #FF0000;
+    color: #ff0000;
   }
 }
 
@@ -339,12 +350,17 @@ img {
   transition: color 0.2s linear;
 
   &:hover {
-    background: -webkit-linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background: -webkit-linear-gradient(45deg,
+        #405de6,
+        #5851db,
+        #833ab4,
+        #c13584,
+        #e1306c,
+        #fd1d1d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
-
 
 .pagination {
   ul {
@@ -368,6 +384,7 @@ img {
 
     &.paging-prev {
       margin-right: 12px;
+
     }
   }
 
@@ -382,7 +399,6 @@ img {
       .list {
         border-radius: 0;
         width: 50px;
-
       }
 
       .option {
@@ -400,13 +416,11 @@ img {
   }
 }
 
-
 .table {
   display: flex;
   flex-direction: column;
   border: 1px solid #c5c2be;
   border-top: none;
-
 
   &__title {
     display: flex;
@@ -456,6 +470,7 @@ img {
       font-weight: 500;
       font-size: 20px;
 
+
       .cost-num {
         font-size: 16px;
         font-weight: 400;
@@ -463,9 +478,13 @@ img {
       }
     }
 
+    &-cost {
+      span {
+        width: 100%;
+      }
+    }
+
     &-delete {
-
-
       i {
         cursor: pointer;
         color: #a10b0b;
@@ -475,8 +494,6 @@ img {
           opacity: 0.7;
         }
       }
-
-
     }
 
     &-item {
@@ -503,6 +520,7 @@ img {
         font-weight: 700;
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         .code-item {
           font-size: 12px;
@@ -515,16 +533,12 @@ img {
 
     &-right {
       display: flex;
-
     }
-
 
     &-cost {
       text-align: center;
       display: flex;
       flex-direction: column;
-
-
     }
   }
 
@@ -546,8 +560,7 @@ img {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s,
-    opacity .5s, visibility .5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
@@ -555,7 +568,7 @@ img {
 
 #button::after {
   content: "\f054";
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   font-size: 2em;
   color: #fff;
   width: 50px;
@@ -580,13 +593,12 @@ img {
   visibility: visible;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   #button.show {
     opacity: 0;
     visibility: hidden;
   }
 }
-
 
 #contact-us,
 #login-modal {
@@ -597,7 +609,7 @@ img {
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -627,6 +639,7 @@ img {
   .form__row input,
   .form__row textarea {
     line-height: 39px;
+    height: 41px;
     border-width: 2px;
   }
 
@@ -647,7 +660,6 @@ img {
   }
 }
 
-
 #buy-click,
 #basket-added,
 #login-modal {
@@ -659,7 +671,7 @@ img {
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -690,6 +702,7 @@ img {
 
   .table__title {
     background-color: transparent;
+    border-bottom: 1px solid #c5c2be;
   }
 
   .form__container {
@@ -710,7 +723,6 @@ img {
 
   .btn-submit i {
     height: 48px;
-
   }
 }
 
@@ -741,7 +753,6 @@ img {
     display: flex;
     width: 57%;
     justify-content: flex-end;
-
   }
 }
 
@@ -766,9 +777,7 @@ img {
 }
 
 .table {
-
   &__title {
-
     &-name {
       &:first-child {
         width: 58%;
@@ -782,7 +791,6 @@ img {
   }
 
   &__row {
-
     &-item {
       width: 58%;
     }
@@ -797,7 +805,6 @@ img {
     }
   }
 }
-
 
 #basket-added {
   &::after {
@@ -823,25 +830,23 @@ img {
     border: 1px solid #cfcecf;
     color: #b7b6b7;
     line-height: 46px;
+    max-width: 232px;
 
     i {
       height: 46px;
     }
-
   }
-
-
 }
 
 #login-modal {
   padding: 20px 40px 30px;
 
   &::before {
-    top: 16%
+    top: 16%;
   }
 
   &::after {
-    bottom: 23%
+    bottom: 23%;
   }
 
   .form__container {
@@ -895,10 +900,8 @@ img {
   }
 }
 
-
 @media (max-width: 850px) {
   .table {
-
     &__row {
 
       &-item,
@@ -996,7 +999,6 @@ img {
         align-items: center;
       }
 
-
       &-item {
         min-height: 100px;
         width: 70%;
@@ -1009,11 +1011,9 @@ img {
           max-width: 250px;
         }
 
-
-
         &__image {
           height: 40px;
-          flex: 0 0 40px
+          flex: 0 0 40px;
         }
       }
 
@@ -1148,7 +1148,6 @@ img {
   }
 }
 
-
 @media (max-width: 400px) {
   .modal__footer-btn {
     flex-direction: column;
@@ -1164,5 +1163,55 @@ img {
 
   #basket-added::after {
     bottom: 26%;
+  }
+}
+
+.viewed {
+  &.main__columns {
+    margin-bottom: 0;
+  }
+
+  .main__columns-column {
+    width: 100%;
+
+    @media (max-width: 1162px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      flex: 0 1 50%;
+    }
+
+  }
+}
+
+.thanks-for-registration {
+  .content-block {
+    max-width: 1065px;
+    margin: 0 auto;
+    text-align: center;
+
+    p {
+      a {
+        color: #c19f8d;
+      }
+
+      &:first-of-type {
+        padding-bottom: 30px;
+        margin: 10px 0 20px;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 60%;
+          height: 1px;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #b59685;
+        }
+      }
+    }
   }
 }

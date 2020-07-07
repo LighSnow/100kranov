@@ -49,7 +49,7 @@ gulp.task('script', function () {
       'node_modules/jquery-validation/dist/jquery.validate.min.js',
       'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
     ])
-    .pipe(concat('libs.js'))
+    .pipe(concat('libs.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
 });

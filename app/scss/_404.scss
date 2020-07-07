@@ -8,6 +8,10 @@
     width: 100%;
     margin: 0 -15px;
     padding-bottom: 60px;
+
+    .form__row input {
+      height: 31px;
+    }
   }
 
   .form__container {
@@ -42,6 +46,7 @@
     }
 
     ul {
+      width: 100%;
       li {
         font-size: 20px;
         line-height: 28px;

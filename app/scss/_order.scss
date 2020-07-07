@@ -102,6 +102,7 @@
       }
 
       &__text {
+        width: 100%;
         p {
           font-size: 18px;
           color: #474747;
@@ -182,8 +183,9 @@
 
           button {
             height: 30px;
-            width: 33px;
+            max-width: 33px;
             display: flex;
+            flex: 1 0 30px;
             justify-content: center;
             align-items: center;
             border: 1px solid #a9a59f;
@@ -216,6 +218,13 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .order__table .table__row-number input {
+    max-width: 60%;
+    flex: 1 0 50px;
+  }
+}
+
 @media(max-width: 850px) {
   .order__info-inner {
     margin: 0;
@@ -244,13 +253,16 @@
   .form__container h3 {
     font-size: 24px;
   }
+
   .order__info-footer>p {
     font-size: 20px;
   }
+
   .order__info-footer>p:last-of-type {
     font-size: 25px;
   }
-  .order__info-footer__text p  {
+
+  .order__info-footer__text p {
     text-align: left;
   }
 
@@ -300,7 +312,7 @@
           &__body {
             font-size: 12px;
             padding-left: 5px;
-            max-width: 250px;
+            max-width: 180px;
           }
         }
 

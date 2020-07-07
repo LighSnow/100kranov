@@ -134,6 +134,7 @@
     input {
       width: 100%;
       line-height: 38px;
+      height: 38px;
       border: none;
       padding: 0 10px;
     }
@@ -773,7 +774,8 @@ body.hasHover .b-menu>li:hover .submenu.hover {
   .header__middle-logo {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 52%;
+    transform: translate(-50%, -50%);
   }
 
   .header__middle-opt a .icon-user-o,
@@ -844,7 +846,7 @@ body.hasHover .b-menu>li:hover .submenu.hover {
 
 @media(max-width: 560px) {
   .header__middle-logo {
-    transform: none;
+    transform: translateY(-50%);
     left: 70px;
   }
 }

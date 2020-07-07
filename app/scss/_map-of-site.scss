@@ -4,12 +4,13 @@
 
   &__row {
     ul {
-      list-style: inherit;
+      list-style: disc;
       padding-left: 17px;
 
       li {
-        list-style: inherit;
+        list-style: disc;
         padding-left: 35px;
+        color: #616161;
 
         a {
           font-size: 16px;

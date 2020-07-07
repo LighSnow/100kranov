@@ -1,5 +1,6 @@
 .reviews {
   &__row {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 65px;
@@ -8,12 +9,15 @@
     }
 
     &-content {
+      width: 100%;
       padding: 0 60px 0 0;
       display: flex;
       flex-direction: column;
 
 
       h2 {
+        flex: 0 0 auto;
+        width: 100%;
         font-size: 34px;
         font-weight: 400;
         text-align: inherit;

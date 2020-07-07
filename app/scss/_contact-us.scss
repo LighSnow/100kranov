@@ -90,9 +90,20 @@
 
 
 @media(max-width: 480px) {
-  .contact-us__column .main__columns-column {
-    flex: 0 1 100%;
+  .contact-us__column .main__columns-row {
+    justify-content: center;
   }
+  .contact-us__column .main__columns-column {
+    flex: 0 1 20%;
+
+    span {
+      display: none;
+    }
+  }
+  .contact-us__column .main__columns-item a i {
+    margin-bottom: 0;
+  }
+
   .main__columns-title span {
     margin-top: 5px;
   }
